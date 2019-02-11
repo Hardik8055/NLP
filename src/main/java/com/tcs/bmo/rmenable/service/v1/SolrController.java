@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.tcs.bmo.exception.BMONlpException;
 import com.tcs.bmo.util.Article;
 import com.tcs.bmo.util.GoogleClient;
 import com.tcs.bmo.util.IndEntity;
@@ -268,12 +269,13 @@ public class SolrController {
 			
 			String queryDetails = "*:*";
 			SolrDocumentList results = getSolrDocument(en, queryDetails, row);
-			List<SolrDocument> listSolrDocument = null;
+			List<SolrDocument> listSolrDocument = new ArrayList<>();
 
 			if (results != null && results.size() > 0) {
 				System.out.println("results.size() -->" + results.size());
 				listSolrDocument = results.subList(0, results.size());
-
+			}else {
+				throw new BMONlpException("No Results Found!!!!");
 			}
 			StringBuilder sb = new StringBuilder();
 			for (SolrDocument doc : listSolrDocument) {

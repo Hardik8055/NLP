@@ -15,9 +15,8 @@ public class CrawlControllerLocal {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		String crawlStorageFolder = "/Users/HardikBharat/Desktop/BMODev\n" + 
-				"\n" + 
-				"";
+	
+		String crawlStorageFolder = "/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/";
         int numberOfCrawlers = 100;
 
         CrawlConfig config = new CrawlConfig();
