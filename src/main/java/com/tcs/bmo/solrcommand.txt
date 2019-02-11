@@ -1,0 +1,4 @@
+run brew install solr
+run solr start
+
+solr create_core -c basketball
