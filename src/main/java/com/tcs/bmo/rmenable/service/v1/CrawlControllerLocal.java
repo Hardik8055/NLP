@@ -46,9 +46,7 @@ public class CrawlControllerLocal {
          * will reach the line after this only when crawling is finished.
          */
         controller.start(MyCrawler.class, numberOfCrawlers);
-        FileWriter writer  = new FileWriter("/Users/HardikBharat/Desktop/BMODev\n" + 
-        		"\n" + 
-        		"/text.log");
+        FileWriter writer  = new FileWriter("/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/text.log");
         writer.write(MyCrawler.sb.toString());
 	}
 

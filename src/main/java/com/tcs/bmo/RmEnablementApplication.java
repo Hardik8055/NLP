@@ -1,12 +1,15 @@
 package com.tcs.bmo;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 public class RmEnablementApplication {
 
 	public static void main(String[] args) {
-		ServerApplication.start(args);
+		SpringApplication.run(RmEnablementApplication.class, args);
 	}
 }
 

@@ -63,10 +63,7 @@ public class NLPController {
 		int flag = 0;
 		// JSONObject jo=(JSONObject)obj;
 		Gson gson = new Gson();
-
-		GoogleClient googleClient = gson.fromJson(new FileReader("/Users/HardikBharat/Desktop/BMODev\n" + 
-				"\n" + 
-				"/samplener.json"), GoogleClient.class);
+		GoogleClient googleClient = gson.fromJson(new FileReader("/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/samplener.json"), GoogleClient.class);
 		List<Article> article = googleClient.getArticles();
 		List<Article> newArticle = new ArrayList<Article>();
 		for (Article a : article) {
@@ -271,9 +268,7 @@ public class NLPController {
 		Properties props = new Properties();
 		props.setProperty("annotators", "tokenize,ssplit,pos,lemma,tokensregex");
 		
-		props.setProperty("tokensregex.rules", "/Users/HardikBharat/Desktop/BMODev\n" + 
-				"\n" + 
-				"/trules.rules");
+		props.setProperty("tokensregex.rules", "/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/trules.rules");
 		props.setProperty("tokensregex.matchedExpressionsAnnotationKey",
 				"com.tcs.bmo.rmenable.service.v1.NLPController$MyMatchedExpressionAnnotation");
 		// build pipeline
@@ -284,9 +279,7 @@ public class NLPController {
 		// JSONObject jo=(JSONObject)obj;
 		Gson gson = new Gson();
 
-		GoogleClient googleClient = gson.fromJson(new FileReader("/Users/HardikBharat/Desktop/BMODev\n" + 
-				"\n" + 
-				"/sample.json"), GoogleClient.class);
+		GoogleClient googleClient = gson.fromJson(new FileReader("/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/sample.json"), GoogleClient.class);
 		List<Article> article = googleClient.getArticles();
 		List<Article> newArticle = new ArrayList<Article>();
 		for (Article a : article) {
@@ -340,9 +333,7 @@ public class NLPController {
 	public ImpactList findImpact() throws ClassNotFoundException, Exception, IOException, ParseException {
 
 		Gson gson = new Gson();
-		ImpactList impactJSON = gson.fromJson(new FileReader("/Users/HardikBharat/Desktop/BMODev\n" + 
-				"\n" + 
-				"/impact.json"), ImpactList.class);
+		ImpactList impactJSON = gson.fromJson(new FileReader("/Users/HardikBharat/eclipse-workspacefinal/NLPProject/misc/impact.json"), ImpactList.class);
 		List<Impact> impactList = impactJSON.getImpacts();
 		for (Impact impact : impactList) {
 			System.out.println(impact.getBrand());

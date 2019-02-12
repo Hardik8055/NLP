@@ -1,4 +1,4 @@
-package com.tcs.bmo;
+/*package com.tcs.bmo;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
@@ -45,3 +45,4 @@ public class TestTwitter {
 	}
 }
 
+*/

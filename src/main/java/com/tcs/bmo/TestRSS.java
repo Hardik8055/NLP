@@ -1,4 +1,4 @@
-package com.tcs.bmo;
+/*package com.tcs.bmo;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -55,3 +55,4 @@ public class TestRSS {
 	
 }
 
+*/
